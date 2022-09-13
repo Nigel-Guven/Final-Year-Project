@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/about_text" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_do_not_disturb_alt_black_24dp"
+            android:title="@string/log_out_text" />
+
+        <item
+            android:id="@+id/rate"
+            android:icon="@drawable/ic_stars_black_24dp"
+            android:title="@string/rate_text" />
+
+    </group>
+</menu>

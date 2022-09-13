@@ -1,0 +1,4 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('jsoup-1.11.3.jar'))
+dependencies {
+}

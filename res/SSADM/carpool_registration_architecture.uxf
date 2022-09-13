@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>50</x>
+      <y>70</y>
+      <w>880</w>
+      <h>620</h>
+    </coordinates>
+    <panel_attributes>Carpool Registration System v0.9
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>100</x>
+      <y>110</y>
+      <w>310</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>RegistryChoose
+--
+Required:
+1. Select Driver or Passenger
+2.IF(driver selected) set checkflag=1;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>130</x>
+      <y>260</y>
+      <w>190</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>RegisterName
+--
+Required:
+1. First Name and Surname
+2. Gender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>580</x>
+      <y>570</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ProfilePhoto
+--
+Required:
+CAMERA INTENT
+1. Bitmap Profile picture</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>220</x>
+      <y>580</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>PhoneAddress
+--
+Required:
+1. Home Address 
+	[Street|City/Town|County]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>440</x>
+      <y>170</y>
+      <w>260</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>CarRegistration
+--
+JSOUP() scrape motorcheck API
+Required:
+1. Retrieve Car info from html_soup
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>420</x>
+      <y>350</y>
+      <w>260</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>DriverLicense
+--
+Required:
+GPC Cloud Vision API
+CAMERA INTENT
+1. Examine if user is able to drive
+ i.e full license [ROI]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>100</x>
+      <y>430</y>
+      <w>300</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Dob
+--
+Required:
+CALENDER OBJECT 
+	-&gt; SELECT DATE OF BIRTH</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>210</y>
+      <w>50</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>27.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>370</y>
+      <w>40</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;15.0;63.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>520</y>
+      <w>80</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>12.0;10.0;57.0;65.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>610</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>760</x>
+      <y>270</y>
+      <w>130</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>SignUp
+--
+Required:
+1. Email
+2. Password</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>360</y>
+      <w>170</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+checkflag!=1</panel_attributes>
+    <additional_attributes>10.0;210.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>480</y>
+      <w>120</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+checkflag=1</panel_attributes>
+    <additional_attributes>40.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>280</y>
+      <w>40</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>240</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>960</x>
+      <y>200</y>
+      <w>110</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1060</x>
+      <y>120</y>
+      <w>30</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>960</x>
+      <y>100</y>
+      <w>110</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Firebase
+CloudStore</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>950</x>
+      <y>120</y>
+      <w>30</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>170</y>
+      <w>130</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+SaveTo()</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>970</x>
+      <y>370</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>HOME
+SYSTEM</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>340</y>
+      <w>120</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+LogIn()</panel_attributes>
+    <additional_attributes>100.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

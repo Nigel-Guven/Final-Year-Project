@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfilePhotoActivity">
+
+    <TextView
+        android:id="@+id/textView105"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="@string/route_text"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView106"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView105"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/map_holder"
+        android:background="@drawable/border_style"
+        android:layout_below="@+id/textView106">
+    <fragment
+        android:id="@+id/map2"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        tools:context=".PostDetailsActivity" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/scrollView1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/contact_text" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map_holder"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="6dp"
+        android:fillViewport="true"
+        style="@style/scrollbar_shape_style"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView107"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:textAlignment="textStart"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView80"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/post_details"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/start_address_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView91"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView87" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView88"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/end_address_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView99"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView88" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/textView89"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/duration_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView93" />
+
+                <TextView
+                    android:id="@+id/textView90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/distance_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView89" />
+
+                <TextView
+                    android:id="@+id/textView93"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/date_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView94"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text=""
+                    app:layout_constraintStart_toEndOf="@+id/textView93"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView95"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/time_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/textView94"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView96"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text=""
+                    app:layout_constraintStart_toEndOf="@+id/textView95"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView97"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView89"
+                    app:layout_constraintTop_toBottomOf="@+id/textView94" />
+
+                <TextView
+                    android:id="@+id/textView98"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView90"
+                    app:layout_constraintTop_toBottomOf="@+id/textView89" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/user_info_text"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView90" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/textView86"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/user_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/email_semicolon"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView86" />
+
+                <TextView
+                    android:id="@+id/textView101"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/mobile_semicolon"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView100"
+                    tools:text="@string/mobile_semicolon" />
+
+                <TextView
+                    android:id="@+id/textView102"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView86"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView103"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView100"
+                    app:layout_constraintTop_toBottomOf="@+id/textView102" />
+
+                <TextView
+                    android:id="@+id/textView104"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView101"
+                    app:layout_constraintTop_toBottomOf="@+id/textView103" />
+
+                <Button
+                    android:id="@+id/button18"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/profile_text"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView104" />
+
+                <Button
+                    android:id="@+id/button19"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="40dp"
+                    android:text="@string/message_text"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView104" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
